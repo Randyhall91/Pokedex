@@ -16,30 +16,61 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">Pokedex</span>
-      </a>
-    </nav>
-  </header>
-  <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
-        </div>
+  <header class="container-fluid mt-3">
+    <div class="row">
+      <div class="col-10 d-flex justify-content-center">
+        <h1>Pokemon!</h1>
+      </div>
+      <div class="col-2">
+        <button class="align-self-end ">My Pokemon</button>
       </div>
     </div>
-  </main>
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p><small>Made with 💖 by CodeWorks</small></p>
-    </div>
-  </footer>
+  </header>
 
+  <main class="d-flex justify-content-center my-5">
+
+    <section class="main-body d-flex flex-column">
+      <div class="border border-dark p-3" id="active-pokemon">
+        <h3>Pokemon Name</h3>
+        <div class="p-3">
+          <img class="img-fluid" src="//thiscatdoesnotexist.com" alt="">
+        </div>
+        <div class="border border-dark p-3">
+          <p>Info</p>
+          <div class="text-end">
+
+            <button class="btn btn-outline-danger">Catch</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="pokemon-list px-5 d-flex flex-column">
+      <div class="border border-dark p-2 align-self-end" id="api-pokemon">
+
+        <div class="pt-5 d-flex justify-content-between">
+          <button class="btn btn-outline-secondary">Previous</button>
+          <button class="btn btn-outline-danger">Next</button>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+    integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
