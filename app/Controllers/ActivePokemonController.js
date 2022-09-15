@@ -1,11 +1,13 @@
 import { appState } from "../AppState.js";
 import { pokemonService } from "../Services/PokemonService.js";
 import { Pop } from "../Utils/Pop.js";
+import { setHTML } from "../Utils/Writer.js";
 
 
 
 function _drawActivePokemon() {
-
+  if (appState.activePokemon == null) { return }
+  setHTML('active-pokemon', appState.activePokemon.PokemonTemplate)
 }
 
 

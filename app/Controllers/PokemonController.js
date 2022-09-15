@@ -6,6 +6,7 @@ import { setHTML } from "../Utils/Writer.js";
 function _drawApiPokemon() {
   let template = ''
   appState.pokemon.forEach(p => template += p.PokemonTemplate)
+
   setHTML('api-pokemon', template)
 }
 

@@ -22,7 +22,9 @@
         <h1>Pokemon!</h1>
       </div>
       <div class="col-2">
-        <button class="align-self-end ">My Pokemon</button>
+        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#mypokemon" role="button" aria-controls="mypokemon">
+          My Pokemon
+        </a>
       </div>
     </div>
   </header>
@@ -31,16 +33,10 @@
 
     <section class="main-body d-flex flex-column">
       <div class="border border-dark p-3" id="active-pokemon">
-        <h3>Pokemon Name</h3>
         <div class="p-3">
-          <img class="img-fluid" src="//thiscatdoesnotexist.com" alt="">
-        </div>
-        <div class="border border-dark p-3">
-          <p>Info</p>
-          <div class="text-end">
-
-            <button class="btn btn-outline-danger">Catch</button>
-          </div>
+          <img class="img-fluid"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgN7IpeUzxOdqjfdyMaenyuQfSEqVbqZbb8Kyp8mgek3thhsXSSMhc8tCdD84VZZuYSzo&usqp=CAU"
+            alt="">
         </div>
 
       </div>
@@ -49,7 +45,8 @@
       <div class="border border-dark p-2 align-self-end" id="api-pokemon">
 
         <div class="pt-5 d-flex justify-content-between">
-          <button class="btn btn-outline-secondary">Previous</button>
+
+          <button class="btn btn-outline-secondary page-link">Previous</button>
           <button class="btn btn-outline-danger">Next</button>
         </div>
       </div>
@@ -60,13 +57,24 @@
 
 
 
-
-
-
-
-
-
   </main>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mypokemon" aria-labelledby="mypokemonLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">My Pokemon</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="SandboxPokemon">
+        Pokemon List
+      </div>
+
+    </div>
+  </div>
+
+
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
     integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="

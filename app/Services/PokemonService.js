@@ -9,14 +9,16 @@ class PokemonService {
 
   async getPokemonDetails(url) {
     const res = await PokemonServer.get(url)
+
     appState.activePokemon = new ActivePokemon(res.data)
-    console.log(appState.activePokemon);
+
+    console.log(new ActivePokemon(res.data));
 
   }
   async getApiPokemon() {
     const res = await PokemonServer.get('/api/v2/pokemon/')
-    console.log(res.data.results);
     appState.pokemon = res.data.results.map(p => new Pokemon(p))
+    // console.log(res.data.results);
   }
 
 }

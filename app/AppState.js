@@ -10,10 +10,17 @@ class AppState extends EventEmitter {
   values = loadState('values', Value)
 
   /** @type {import('./Models/Pokemon').Pokemon[]} */
-  pokemon = loadState('pokemon', Pokemon)
+  pokemon = []
 
   /** @type {import('./Models/ActivePokemon.js').ActivePokemon | null} */
   activePokemon = null
+
+
+  /** @type {import('./Models/SandboxPokemon').SandboxPokemon[]} */
+  sandboxPokemon = []
+
+  user = prompt('What your name?')
+
 
 }
 
